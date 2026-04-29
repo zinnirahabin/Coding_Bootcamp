@@ -1,0 +1,182 @@
+/* ===========================
+   GLOBAL SCROLL BEHAVIOR
+=========================== */
+html {
+  scroll-behavior: smooth;
+  /* removee scroll-padding-top to stop extreme downward jump */
+}
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar {
+  background-color: #c1121f !important;
+  height: 60px;
+}
+
+
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+
+/* ===========================
+   SIDEBAR
+=========================== */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 220px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background-color: #f8f9fa !important;
+    border-right: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.sidebar .nav-link {
+  color: #000 !important;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin: 4px 8px;
+  transition: 0.2s;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #ffe5e5 !important;
+  color: #c1121f !important;
+}
+
+.sidebar .nav-link.active {
+  color: #000 !important;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin: 4px 8px;
+  transition: 0.2s;
+}
+
+
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+  margin-left: 220px !important;
+  padding: 20px 40px;
+}
+
+
+/* ===========================
+   EACH PAGE SECTION
+=========================== */
+
+/* ⭐ This controls the spacing */
+.section-block {
+  padding-top: 60px;   /* bring page UP */
+  padding-bottom: 80px;
+  min-height: 100vh;
+
+  /* ewmove scroll-margin so it stops jumping too low */
+}
+
+.section-block h1,
+.section-block h2 {
+  margin-bottom: 25px;
+}
+
+
+/* ===========================
+   CARDS
+=========================== */
+.card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+/* ===========================
+   ANNOUNCEMENTS
+=========================== */
+.announcement-small {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 500px;
+}
+
+.announcement-icon {
+  color: #dc3545;
+  margin-right: 6px;
+}
+
+.announcement-list-small {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.announcement-list-small li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #444;
+}
+
+.announcement-list-small li:last-child {
+  border-bottom: none;
+}
+
+.announcement-date {
+  font-size: 12px;
+  color: #888;
+}
+
+
+/* ===========================
+   BUTTONS
+=========================== */
+.btn-success,
+.btn-primary {
+  background-color: #0066ff !important;
+  border-color: #0066ff !important;
+}
+
+.btn-success:hover,
+.btn-primary:hover {
+  background-color: #0052cc !important;
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 767.98px) {
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    border-right: none;
+  }
+
+  main {
+    margin-left: 0 !important;
+    padding: 20px;
+  }
+
+  .section-block {
+    padding-top: 40px;  /* smaller on mobile */
+  }
+}
+select option[disabled] {
+  color: #aaa;
+  background-color: #eee;
+  cursor: not-allowed;
+}

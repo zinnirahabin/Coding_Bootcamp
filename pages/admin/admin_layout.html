@@ -1,0 +1,32 @@
+
+
+<link rel="stylesheet" href="/training_system/assets/css/admin.css">
+
+<div class="sidebar">
+  <h2>Admin Panel</h2>
+  <a href="#dashboard">Dashboard</a>
+  <a href="#Participant" onclick="loadPage('admin_participant.php')">Participant</a>
+  <a href="#course" onclick="loadPage('admin_course.php')">Course</a>
+  <a href="#schedule">Schedule</a>
+  <a href="/training_system/logout.php">Logout</a>
+</div>
+
+<div class="main">
+  <div class="header">
+    <img src="/training_system/assets/img/uniten_logo.png" width="150">
+    <span>Welcome, Admin</span>
+  </div>
+
+  <!-- IMPORTANT: content loads here -->
+  <div id="page-content"></div>
+</div>
+
+<script>
+function loadPage(page) {
+    fetch('/training_system/pages/admin/' + page)
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('page-content').innerHTML = html;
+        });
+}
+</script>
